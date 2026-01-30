@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "env": {
+    "NEXT_PUBLIC_API_URL": "http://10.94.237.60:5001",
+    "NEXT_PUBLIC_WS_URL": "ws://10.94.237.60:5001"
+  }
+}
