@@ -107,7 +107,7 @@ const HomePage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-600 to-purple-700 text-white">
       <div className="container mx-auto px-5 py-10 text-center max-w-4xl">
-        <h1 className="text-5xl font-bold mb-4">🌾 FreshMandi AI</h1>
+        <h1 className="text-5xl font-bold mb-4">🌾 FreshMandi AI - Interactive Demo</h1>
         <p className="text-xl mb-8 opacity-90">
           AI-powered marketplace for Indian fruits, vegetables, rice & grains with smart pricing and quality assessment
         </p>
