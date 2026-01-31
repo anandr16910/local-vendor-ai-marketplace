@@ -4,7 +4,7 @@ An open-source, AI-powered marketplace platform for Indian fruits, vegetables, r
 
 ## 🌐 Live Demo
 
-**Frontend**: [https://local-vendor-ai-marketplace.vercel.app](https://local-vendor-ai-marketplace.vercel.app)
+**Frontend**: [http://freshmandi-ai-frontend.s3-website-us-east-1.amazonaws.com](http://freshmandi-ai-frontend.s3-website-us-east-1.amazonaws.com)
 
 ## 🤖 AI Features (AWS Bedrock Integration)
 
