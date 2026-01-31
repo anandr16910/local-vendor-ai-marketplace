@@ -73,29 +73,35 @@
 
 
         <div class="features">
-            <div class="feature">
+            <div class="feature" onclick="showDemo('vegetables')" style="cursor: pointer;">
                 <h3>🥬 Fresh Vegetables</h3>
                 <p>AI-powered quality assessment and price prediction for seasonal vegetables across India</p>
+                <small style="opacity: 0.7;">Click to see demo</small>
             </div>
-            <div class="feature">
+            <div class="feature" onclick="showDemo('fruits')" style="cursor: pointer;">
                 <h3>🍎 Fruits & Produce</h3>
                 <p>Smart grading system for fruits with ripeness detection and optimal selling recommendations</p>
+                <small style="opacity: 0.7;">Click to see demo</small>
             </div>
-            <div class="feature">
+            <div class="feature" onclick="showDemo('rice')" style="cursor: pointer;">
                 <h3>🌾 Rice Varieties</h3>
                 <p>Comprehensive marketplace for Basmati, Jasmine, and regional rice varieties with quality analysis</p>
+                <small style="opacity: 0.7;">Click to see demo</small>
             </div>
-            <div class="feature">
+            <div class="feature" onclick="showDemo('grains')" style="cursor: pointer;">
                 <h3>🌰 Grains & Pulses</h3>
                 <p>AI-driven pricing for wheat, dal, and other grains with market trend predictions</p>
+                <small style="opacity: 0.7;">Click to see demo</small>
             </div>
-            <div class="feature">
+            <div class="feature" onclick="showDemo('prediction')" style="cursor: pointer;">
                 <h3>📊 Price Prediction</h3>
                 <p>AWS Bedrock AI models predict market prices based on seasonal patterns and demand</p>
+                <small style="opacity: 0.7;">Click to see demo</small>
             </div>
-            <div class="feature">
+            <div class="feature" onclick="showDemo('assistant')" style="cursor: pointer;">
                 <h3>🤖 Smart Assistant</h3>
                 <p>Multilingual AI chat support in Hindi and regional languages for farmers and traders</p>
+                <small style="opacity: 0.7;">Click to see demo</small>
             </div>
         </div>
 
@@ -169,6 +175,105 @@
     </div>
 
     <script>
+        // Demo data for different categories
+        const demoData = {
+            vegetables: {
+                title: "🥬 Vegetables AI Demo",
+                content: `
+                    <h3>AI Price Prediction: Tomatoes</h3>
+                    <div style="background: rgba(0,255,0,0.2); padding: 15px; border-radius: 8px; margin: 10px 0;">
+                        <strong>Current Price:</strong> ₹45/kg<br>
+                        <strong>Predicted (7 days):</strong> ₹52/kg<br>
+                        <strong>Confidence:</strong> 87%<br>
+                        <strong>Recommendation:</strong> Hold for better prices next week
+                    </div>
+                `
+            },
+            fruits: {
+                title: "🍎 Fruits AI Demo", 
+                content: `
+                    <h3>Quality Assessment: Mangoes</h3>
+                    <div style="background: rgba(0,255,0,0.2); padding: 15px; border-radius: 8px; margin: 10px 0;">
+                        <strong>Quality Grade:</strong> Excellent (92/100)<br>
+                        <strong>Ripeness:</strong> Perfect for selling<br>
+                        <strong>Defects:</strong> None detected<br>
+                        <strong>Market Value:</strong> Premium grade
+                    </div>
+                `
+            },
+            rice: {
+                title: "🌾 Rice AI Demo",
+                content: `
+                    <h3>Market Analysis: Basmati Rice</h3>
+                    <div style="background: rgba(0,255,0,0.2); padding: 15px; border-radius: 8px; margin: 10px 0;">
+                        <strong>Current Rate:</strong> ₹75/kg<br>
+                        <strong>Demand:</strong> High (Festival season)<br>
+                        <strong>Best Markets:</strong> Delhi, Mumbai<br>
+                        <strong>Profit Margin:</strong> 25-30%
+                    </div>
+                `
+            },
+            grains: {
+                title: "🌰 Grains AI Demo",
+                content: `
+                    <h3>Price Forecast: Wheat</h3>
+                    <div style="background: rgba(0,255,0,0.2); padding: 15px; border-radius: 8px; margin: 10px 0;">
+                        <strong>Current Price:</strong> ₹28/kg<br>
+                        <strong>Seasonal Trend:</strong> Increasing<br>
+                        <strong>Best Selling Time:</strong> Next 2 months<br>
+                        <strong>Expected Peak:</strong> ₹32/kg
+                    </div>
+                `
+            },
+            prediction: {
+                title: "📊 AI Price Prediction",
+                content: `
+                    <h3>AWS Bedrock AI Analysis</h3>
+                    <div style="background: rgba(0,255,0,0.2); padding: 15px; border-radius: 8px; margin: 10px 0;">
+                        <strong>Model:</strong> Claude 3 Haiku<br>
+                        <strong>Accuracy:</strong> 85-90%<br>
+                        <strong>Factors Analyzed:</strong><br>
+                        • Weather patterns<br>
+                        • Market demand<br>
+                        • Seasonal trends<br>
+                        • Regional variations
+                    </div>
+                `
+            },
+            assistant: {
+                title: "🤖 AI Chat Assistant",
+                content: `
+                    <h3>Multilingual Support Demo</h3>
+                    <div style="background: rgba(255,255,255,0.1); padding: 10px; border-radius: 5px; margin: 5px 0;">
+                        <strong>You:</strong> "आज टमाटर का भाव क्या है?" (What's today's tomato price?)
+                    </div>
+                    <div style="background: rgba(0,255,0,0.2); padding: 10px; border-radius: 5px; margin: 5px 0;">
+                        <strong>AI:</strong> "आज टमाटर का भाव ₹45 प्रति किलो है। मुंबई मंडी में सबसे अच्छा रेट मिल रहा है।"<br>
+                        <small>(Today's tomato price is ₹45 per kg. Best rates available in Mumbai market.)</small>
+                    </div>
+                `
+            }
+        };
+
+        function showDemo(category) {
+            const demo = demoData[category];
+            const popup = `
+                <div style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 1000; display: flex; align-items: center; justify-content: center;" onclick="this.remove()">
+                    <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 30px; border-radius: 15px; max-width: 500px; margin: 20px;" onclick="event.stopPropagation()">
+                        <h2>${demo.title}</h2>
+                        ${demo.content}
+                        <div style="text-align: center; margin-top: 20px;">
+                            <button onclick="this.parentElement.parentElement.parentElement.remove()" style="background: rgba(255,255,255,0.2); color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">Close Demo</button>
+                        </div>
+                        <div style="text-align: center; margin-top: 10px; font-size: 0.8em; opacity: 0.7;">
+                            Powered by AWS Bedrock AI
+                        </div>
+                    </div>
+                </div>
+            `;
+            document.body.insertAdjacentHTML('beforeend', popup);
+        }
+
         // Add some interactivity
         document.querySelectorAll('.feature').forEach(feature => {
             feature.addEventListener('mouseenter', () => {
@@ -179,12 +284,6 @@
                 feature.style.transform = 'scale(1)';
             });
         });
-
-        // Show deployment success message
-        setTimeout(() => {
-            const status = document.querySelector('.status');
-            status.style.animation = 'pulse 2s infinite';
-        }, 1000);
 
         // Add pulse animation
         const style = document.createElement('style');
