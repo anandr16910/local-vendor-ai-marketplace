@@ -4,29 +4,29 @@ import { Inter } from 'next/font/google'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'Local Vendor AI Marketplace',
-  description: 'AI-driven price discovery and negotiation tools for local vendors in India',
+  title: 'FreshMandi AI - Agricultural Marketplace',
+  description: 'AI-powered marketplace for Indian fruits, vegetables, rice & grains with smart pricing and quality assessment',
   manifest: '/manifest.json',
   themeColor: '#3b82f6',
   viewport: 'width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes',
   appleWebApp: {
     capable: true,
     statusBarStyle: 'default',
-    title: 'VendorAI'
+    title: 'FreshMandi AI'
   },
   formatDetection: {
     telephone: false
   },
   openGraph: {
     type: 'website',
-    siteName: 'Local Vendor AI Marketplace',
-    title: 'Local Vendor AI Marketplace',
-    description: 'AI-driven price discovery and negotiation tools for local vendors in India',
+    siteName: 'FreshMandi AI - Agricultural Marketplace',
+    title: 'FreshMandi AI - Agricultural Marketplace',
+    description: 'AI-powered marketplace for Indian fruits, vegetables, rice & grains with smart pricing and quality assessment',
   },
   twitter: {
     card: 'summary',
-    title: 'Local Vendor AI Marketplace',
-    description: 'AI-driven price discovery and negotiation tools for local vendors in India',
+    title: 'FreshMandi AI - Agricultural Marketplace',
+    description: 'AI-powered marketplace for Indian fruits, vegetables, rice & grains with smart pricing and quality assessment',
   }
 }
 
