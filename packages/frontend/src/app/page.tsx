@@ -194,7 +194,7 @@ const HomePage = () => {
         >
           <div 
             className="bg-gradient-to-br from-blue-600 to-purple-700 text-white p-8 rounded-2xl max-w-lg w-full"
-            onClick={(e) => e.stopPropagation()}
+            onClick={(e: React.MouseEvent) => e.stopPropagation()}
           >
             <h2 className="text-2xl font-bold mb-4">{demoData[activeDemo as keyof typeof demoData].title}</h2>
             <div className="mb-6">
