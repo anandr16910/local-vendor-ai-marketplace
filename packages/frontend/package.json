@@ -37,7 +37,9 @@
     "workbox-webpack-plugin": "^7.0.0",
     "workbox-window": "^7.0.0",
     "clsx": "^2.0.0",
-    "tailwind-merge": "^1.14.0"
+    "tailwind-merge": "^1.14.0",
+    "@aws-sdk/client-bedrock-runtime": "^3.490.0",
+    "@aws-sdk/credential-providers": "^3.490.0"
   },
   "devDependencies": {
     "@types/node": "20.4.5",
