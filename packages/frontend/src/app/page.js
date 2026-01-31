@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 
 const HomePage = () => {
-  const [activeDemo, setActiveDemo] = useState<string | null>(null);
+  const [activeDemo, setActiveDemo] = useState(null);
 
   const demoData = {
     vegetables: {
@@ -96,7 +96,7 @@ const HomePage = () => {
     }
   };
 
-  const showDemo = (category: string) => {
+  const showDemo = (category) => {
     setActiveDemo(category);
   };
 
@@ -194,11 +194,11 @@ const HomePage = () => {
         >
           <div 
             className="bg-gradient-to-br from-blue-600 to-purple-700 text-white p-8 rounded-2xl max-w-lg w-full"
-            onClick={(e: React.MouseEvent) => e.stopPropagation()}
+            onClick={(e) => e.stopPropagation()}
           >
-            <h2 className="text-2xl font-bold mb-4">{demoData[activeDemo as keyof typeof demoData].title}</h2>
+            <h2 className="text-2xl font-bold mb-4">{demoData[activeDemo].title}</h2>
             <div className="mb-6">
-              {demoData[activeDemo as keyof typeof demoData].content}
+              {demoData[activeDemo].content}
             </div>
             <div className="text-center">
               <button 
