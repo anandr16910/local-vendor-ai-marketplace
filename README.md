@@ -221,9 +221,7 @@ This project is open source and available under the [MIT License](LICENSE).
 **Created by Anand Rajgopalan**  
 Built with AWS platform tools supported by Kiro
 
-### Connect
-- **GitHub**: [@anandr16910](https://github.com/anandr16910)
-- **Project**: [FreshMandi AI](https://local-vendor-ai-marketplace.vercel.app)
+
 
 ---
 
