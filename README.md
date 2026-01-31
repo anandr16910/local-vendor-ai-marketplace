@@ -236,4 +236,4 @@ Built with AWS platform tools supported by Kiro
 
 **🌟 Star this repository if you find it useful for learning AWS Bedrock, agricultural AI, or full-stack development!**
 
-**🤝 Contributions welcome - let's build the future of Indian agriculture together!**
+
