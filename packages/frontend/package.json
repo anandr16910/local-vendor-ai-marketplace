@@ -1,14 +1,9 @@
 {
-  "name": "@local-vendor-ai/frontend",
+  "name": "freshmandi-ai-frontend",
   "version": "1.0.0",
-  "description": "Frontend for FreshMandi AI Agricultural Marketplace",
+  "description": "FreshMandi AI - Agricultural Marketplace Frontend",
   "private": true,
   "scripts": {
-    "start": "serve .",
-    "dev": "serve .",
-    "build": "echo 'Static site - no build needed'"
-  },
-  "devDependencies": {
-    "serve": "^14.0.0"
+    "deploy": "aws s3 sync . s3://freshmandi-ai-frontend --delete"
   }
 }
