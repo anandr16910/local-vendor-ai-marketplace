@@ -4,7 +4,11 @@ An open-source, AI-powered marketplace platform for Indian fruits, vegetables, r
 
 ## 🌐 Live Demo
 
-**Frontend**: [http://freshmandi-ai-frontend.s3-website-us-east-1.amazonaws.com](http://freshmandi-ai-frontend.s3-website-us-east-1.amazonaws.com)
+**Primary URL (HTTPS)**: [https://dl2y75k91uo6l.cloudfront.net](https://dl2y75k91uo6l.cloudfront.net) ✅ **Mobile Compatible**  
+**Alternative URL**: [https://freshmandi-ai-frontend.s3.amazonaws.com/index.html](https://freshmandi-ai-frontend.s3.amazonaws.com/index.html)  
+**Development URL**: `http://freshmandi-ai-frontend.s3-website-us-east-1.amazonaws.com`
+
+> **📱 Mobile Users**: Use the HTTPS URLs above for best compatibility
 
 ## 🤖 AI Features (AWS Bedrock Integration)
 
